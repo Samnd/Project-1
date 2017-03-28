@@ -11,11 +11,11 @@ private:
 	int prefer;
 public:
 	Monhoc();
-	SetMonHoc();
-	SetPrefer();
-	GetmaHP();
-	GettenHP();
-	GetPrefer();
+	void SetMonHoc();
+	void SetPrefer();
+	string GetmaHP();
+	string GettenHP();
+	string GetPrefer();
 	~Monhoc();
 	
 };

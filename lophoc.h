@@ -2,6 +2,7 @@
 #define LOPHOC_H_
 
 #include <string>
+#include <string.h>
 
 class Lophoc
 {
@@ -13,12 +14,12 @@ private:
 	int end;
 public:
 	Lophoc();
-	SetLopHoc();
-	Getmalop();
-	GetmaHP();
-	Getthu();
-	Getstart();
-	Getend();
+	void SetLopHoc();
+	int Getmalop();
+	string GetmaHP();
+	int Getthu();
+	int Getstart();
+	int Getend();
 	~Lophoc();
 	
 };

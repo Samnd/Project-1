@@ -18,7 +18,8 @@ private:
 	int tiet12;
 public:
 	thoikhoabieu();
-	Set();
+	void Setvalue();
+	int Getvalue();
 	~thoikhoabieu();
 	
 };
