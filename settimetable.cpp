@@ -3,6 +3,7 @@
 #include "thoikhoabieu.h"
 #include <iostream>
 #include <string>
+#include <queue>
 
 using namespace std;
 
@@ -35,31 +36,31 @@ void InputSubject(monhoc[] subject)
 	}
 }
 //Make Condition
-void Avoid(int[] thu, int[] tiet, thoikhoabieu[] TKB)
-{
-	for (int i = 0; i < thu.length(); ++i)
-	{
-		for (int j = 0; j < tiet.length(); ++j)
-		{
-			int day=thu[i];
-			int period=tiet[j];
-			TKB[day-2].Setvalue(2,period-1);
-		}
-	}
-}
-void Offer1(int[] thu, int[] tiet, thoikhoabieu[] TKB)
-{
-	for (int i = 0; i < thu.length(); ++i)
-	{
-		for (int j = 0; j < tiet.length(); ++j)
-		{
-			int day=thu[i];
-			int period=tiet[j];
-			TKB[day-2].Setvalue(1,period-1);
-		}
-	}
-}
-void Offer2(string maHP, int ID, thoikhoabieu[] TKB, monhoc[] subject)
+// void Avoid(int[] thu, int[] tiet, thoikhoabieu[] TKB)
+// {
+// 	for (int i = 0; i < thu.length(); ++i)
+// 	{
+// 		for (int j = 0; j < tiet.length(); ++j)
+// 		{
+// 			int day=thu[i];
+// 			int period=tiet[j];
+// 			TKB[day-2].Setvalue(2,period-1);
+// 		}
+// 	}
+// }
+// void Offer1(int[] thu, int[] tiet, thoikhoabieu[] TKB)
+// {
+// 	for (int i = 0; i < thu.length(); ++i)
+// 	{
+// 		for (int j = 0; j < tiet.length(); ++j)
+// 		{
+// 			int day=thu[i];
+// 			int period=tiet[j];
+// 			TKB[day-2].Setvalue(1,period-1);
+// 		}
+// 	}
+// }
+void SetOffer2(string maHP, int ID, thoikhoabieu[] TKB, monhoc[] subject)
 {
 	for (int i = 0; i < countOfSubject; ++i)
 		if (maHP == subject[i].GetmaHP())
@@ -80,18 +81,80 @@ void Offer2(string maHP, int ID, thoikhoabieu[] TKB, monhoc[] subject)
 }
 //Set Condition
 
-void SetAvoid()
+void SetAvoid(thoikhoabieu[] TKB)
 {
-	int thu[6];
-	int tiet[12];
-	boolean inthu=TRUE; intiet=FALSE;
-	while(inthu)
+	queue<int> Thu;
+	int check=2;
+	int thu;
+	do{
+		cout<<"Moi ban nhap thu:";
+		cin>>thu;
+		Thu.push(thu);
+		cout<<"Ban muon nhap tiep: 1_Yes 2_No";
+		cin>>check;
+	} while(check==1);
+	while(!Thu.empty())
 	{
-		
+		int thu_cur = Thu.front();
+		cout<<"Thu"<<thu_cur<<endl;
+		int check_cur=2, tiet_cur;
+		do{
+			cout<<"Moi ban nhap tiet:";
+			cin>>tiet_cur;
+			TKB[thu_cur-2].Setvalue(2,tiet_cur-1);
+			cout<<"Ban muon nhap tiep: 1_Yes 2_No";
+			cin>>check_cur;
+		}while(check_cur == 1);
+		Thu.pop();
+	};
+}
+
+void SetOffer(thoikhoabieu[] TKB)
+{
+	queue<int> Thu;
+	int check=2;
+	int thu;
+	do{
+		cout<<"Moi ban nhap thu:";
+		cin>>thu;
+		Thu.push(thu);
+		cout<<"Ban muon nhap tiep: 1_Yes 2_No";
+		cin>>check;
+	} while(check==1);
+	while(!Thu.empty())
+	{
+		int thu_cur = Thu.front();
+		cout<<"Thu"<<thu_cur<<endl;
+		int check_cur=2, tiet_cur;
+		do{
+			cout<<"Moi ban nhap tiet:";
+			cin>>tiet_cur;
+			TKB[thu_cur-2].Setvalue(1,tiet_cur-1);
+			cout<<"Ban muon nhap tiep: 1_Yes 2_No";
+			cin>>check_cur;
+		}while(check_cur == 1);
+		Thu.pop();
 	}
 }
 
+//Set Queue
+/*Hiện có 3 mảng là: classes[] chứa các lớp, subject[] chứa các môn học, TKB[] là thời khóa biểu.
+Khai báo thêm DSLop[j] chứa id của các lớp thuộc Môn học[j]. counting[j] là số lớp của môn học j*/
+void Add(int j,int id, int )
+void SetQueue(int[] counting, lophoc[] classes, monhoc[] subject)
+{
+	for (int i = 0; i < countOfClass; ++i)
+	{
+		for (int j= 0; i < countOfSubject; ++i)
+		{
+			if (classes[i].GetmaHP() == subject[j].GetmaHP())
+			{
+				counting[j]++;
 
+			}
+		}
+	}
+}
 
 
 
