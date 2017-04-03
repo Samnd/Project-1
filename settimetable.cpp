@@ -139,9 +139,38 @@ void SetOffer(thoikhoabieu[] TKB)
 
 //Set Queue
 /*Hiện có 3 mảng là: classes[] chứa các lớp, subject[] chứa các môn học, TKB[] là thời khóa biểu.
-Khai báo thêm DSLop[j] chứa id của các lớp thuộc Môn học[j]. counting[j] là số lớp của môn học j*/
-void Add(int j,int id, int )
-void SetQueue(int[] counting, lophoc[] classes, monhoc[] subject)
+Khai báo thêm DSLop[i][j] chứa id của các lớp thuộc Môn học[j]. counting[j] là số lớp của môn học j    int** &A
+Mảng counting có countOfSubject phần tử, Queue chính: QueMain*/
+void Add(int** &DSLop[10][20], int j,int id, int[] counting)
+{
+	DSLop[j][counting[j]] = id;
+}
+void InputQueue(queue Que, int k)
+{
+	Que.push(k);
+}
+bool isEmpty(int[] counting)
+{
+	for (int i = 0; i < countOfSubject; ++i)
+	{
+		if (counting[i] != 0) return false;
+	}
+	return true;
+}
+int Min(int[] counting)
+{
+	int min = counting[0], value = 0;
+	for (int i = 1; i < countOfSubject; ++i)
+	{
+		if (counting[i] < min)
+		{
+			min = counting[i];
+			value = i;
+		}
+	}
+	return value;
+}
+void SetQueue(int* counting[], lophoc[] classes, monhoc[] subject)
 {
 	for (int i = 0; i < countOfClass; ++i)
 	{
@@ -149,12 +178,35 @@ void SetQueue(int[] counting, lophoc[] classes, monhoc[] subject)
 		{
 			if (classes[i].GetmaHP() == subject[j].GetmaHP())
 			{
-				counting[j]++;
-
+				int id = classes[i].Getmalop();
+				Add(DSLop,j,id,counting);
+				*counting[j]++;
 			}
 		}
 	}
+	for (int i = 0; i < countOfSubject; ++i)
+	{
+		bool test;
+		if (subject[i].GetPrefer() != 0)
+			test = true;
+		else test = false;
+		if (test)
+		{
+			InputQueue(QueMain,i);
+			*counting[i] = 0;
+		}
+	}
+	while(!isEmpty(counting))
+	{
+		int k = Min(counting);
+		InputQueue(QueMain,k);
+		*counting[k] = 0;
+	}
 }
+
+/* Có một QueMain vs thứ tự là ds các môn có số lớp tăng dần, và một mảng 2 chiều Dslop[j][] chứa id của các lớp thuộc môn học [j] 
+Khởi tạo một biến myStyle vs 2 giá trị, true là thưa và false là dày*/
+
 
 
 
