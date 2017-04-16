@@ -3,6 +3,21 @@
 
 using namespace std;
 
+thoikhoabieu::thoikhoabieu()
+{
+	this->tiet1 = 0;
+	this->tiet2 = 0;
+	this->tiet3 = 0;
+	this->tiet4 = 0;
+	this->tiet5 = 0;
+	this->tiet6 = 0;
+	this->tiet7 = 0;
+	this->tiet8 = 0;
+	this->tiet9 = 0;
+	this->tiet10 = 0;
+	this->tiet11 = 0;
+	this->tiet12 = 0;
+}
 void thoikhoabieu::Setvalue(int giatri, int vitri){
 	if (vitri == 0)	this->tiet1 = giatri;
 	else if (vitri == 1) this->tiet2 = giatri;

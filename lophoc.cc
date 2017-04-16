@@ -4,6 +4,14 @@
 
 using namespace std;
 
+lophoc::lophoc()
+{
+	this->maLop = 0;
+	this->maHP = NULL;
+	this->thu = 0;
+	this->start = 0;
+	this->end = 0;
+}
 void lophoc::SetLopHoc()
 {
 	cout<<"Nhap ma lop:";

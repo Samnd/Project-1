@@ -3,20 +3,20 @@
 
 #include <string>
 
-class Monhoc
+class monhoc
 {
 private:
 	string maHP;
 	string tenHP;
 	int prefer;
 public:
-	Monhoc();
+	monhoc();
 	void SetMonHoc();
 	void SetPrefer();
 	string GetmaHP();
 	string GettenHP();
 	string GetPrefer();
-	~Monhoc();
+	~monhoc();
 	
 };
 #endif

@@ -5,6 +5,12 @@
 
 using namespace std;
 
+monhoc::monhoc()
+{
+	this->maHP = NULL;
+	this->tenHP = NULL;
+	this->prefer = 0;
+}
 void monhoc::SetMonHoc(){
 	cout<<"Nhap ma hoc phan:";
 	fflush(stdin);
