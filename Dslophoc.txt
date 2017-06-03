@@ -1,0 +1,170 @@
+﻿TC
+94993
+IT3020
+Toan Roi Rac
+2 7 10
+TC
+94994
+IT3020
+Toan Roi Rac
+4 9 12
+TC
+95009
+IT3020
+Toan Roi Rac
+4 9 12
+TC
+95112
+IT3020
+Toan Roi Rac
+2 9 12
+TC
+95113
+IT3020
+Toan Roi Rac
+5 7 10
+TC
+95004
+IT3080
+Mang May Tinh
+2 7 10
+TC
+95002
+IT3080
+Mang May Tinh
+3 7 10
+TC
+95003
+IT3080
+Mang May Tinh
+5 9 12
+TC
+95108
+IT3080
+Mang May Tinh
+4 7 10
+TC
+95109
+IT3080
+Mang May Tinh
+6 9 12
+TC
+95005
+IT3110
+Linux
+6 7 9
+TC
+95006
+IT3110
+Linux
+6 10 12
+TC
+95019
+IT3110
+Linux
+3 10 12
+TC
+95105
+IT3110
+Linux
+3 7 9
+TC
+95106
+IT3541
+Ky Thuat Lap Trinh
+4 7 10
+TC
+95107
+IT3541
+Ky Thuat Lap Trinh
+6 9 12
+TC
+95110
+IT3590
+Co So Du Lieu
+3 7 9
+TC
+95111
+IT3590
+Co So Du Lieu
+3 10 12
+TC
+66107
+TN3590
+TN CSDL
+3 2 6
+TC
+66109
+TN3590
+TN CSDL
+5 2 6
+TC
+95036
+IT4480
+Lam Viec Nhom
+3 3 6
+TC
+81645
+PE2022
+Bong Chuyen 2
+6 2 3
+TC
+81647
+PE2022
+Bong Chuyen 2
+6 3 4
+TC
+81660
+PE2022
+Bong Chuyen 2
+6 1 2
+TC
+81661
+PE2022
+Bong Chuyen 2
+6 11 12
+TC
+94517
+SSH1130
+Duong Loi CM
+2 1 2
+TC
+94518
+SSH1130
+Duong Loi CM
+2 3 4
+TC
+94519
+SSH1130
+Duong Loi CM
+2 5 6
+TC
+94526
+SSH1130
+Duong Loi CM
+4 1 2
+TC
+94527
+SSH1130
+Duong Loi CM
+4 3 4
+TC
+94528
+SSH1130
+Duong Loi CM
+4 5 6
+TC
+94550
+SSH1130
+Duong Loi CM
+5 7 8
+TC
+94551
+SSH1130
+Duong Loi CM
+5 9 10
+TC
+94552
+SSH1130
+Duong Loi CM
+5 11 12

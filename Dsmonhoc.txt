@@ -1,0 +1,27 @@
+SH1130
+Duong Loi CM
+3
+IT3020
+Toan Roi Rac
+3
+IT4480
+Lam Viec Nhom
+2
+IT3110
+Linux
+2
+IT3590
+Co So Du Lieu
+3
+IT3541
+Ky Thuat Lap Trinh
+3
+PE2022
+Bong Chuyen 2
+0
+IT3080
+Mang May Tinh
+3
+TN3590
+TN CSDL
+0

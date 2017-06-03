@@ -1,6 +1,8 @@
 #ifndef THOIKHOABIEU_H_
 #define THOIKHOABIEU_H_
 
+using namespace std;
+
 class thoikhoabieu
 {
 private:
@@ -18,12 +20,10 @@ private:
 	int tiet12;
 public:
 	thoikhoabieu();
-	void Setvalue();
-	int Getvalue();
+	void Setvalue(int giatri, int vitri);
+	int Getvalue(int vitri);
 	~thoikhoabieu();
-	
+
 };
-
-
 
 #endif

@@ -1,22 +1,26 @@
 #ifndef MONHOC_H_
 #define MONHOC_H_
 
+#include "stdafx.h"
 #include <string>
+
+using namespace std;
 
 class monhoc
 {
 private:
 	string maHP;
 	string tenHP;
-	int prefer;
+	int TCHP;
 public:
 	monhoc();
-	void SetMonHoc();
-	void SetPrefer();
+	void SetMaHP(string str);
+	void SetTenHP(string str);
+	void SetTCHP(int);
 	string GetmaHP();
 	string GettenHP();
-	string GetPrefer();
+	int GetTCHP();
 	~monhoc();
-	
+
 };
 #endif
