@@ -499,6 +499,27 @@ void EarseTimeTable(thoikhoabieu TKB[6])
 		}
 	}
 }
+string Whatis(GroupBySubject *ds_Lophoc, int id)
+{
+	GroupBySubject *p = ds_Lophoc;
+	while (true)
+	{
+		Node_LopHoc *pNode = p->ListClass;
+		while (true)
+		{
+			if (pNode->loptc.Getmalop() == id)
+			{
+				string str = pNode->loptc.GetTenHP();
+				return str;
+			}
+			if (pNode->next == NULL) break;
+			pNode = pNode->next;
+		}
+		if (p->next == ds_Lophoc) break;
+		p = p->next;
+	}
+	return "None";
+}
 //KẾT THÚC HÀM TIỆN ÍCH
 
 //SINH QUẦN THỂ ĐẦU TIÊN
@@ -1091,6 +1112,13 @@ int main()
 				cout << "Moi ban nhap ma lop: ";
 				cin >> id;
 				cout << endl;
+				string str = Whatis(ds_LopHoc, id);
+				if (strcmpi(str.c_str(), "None") == 0)
+				{
+					cout << "Khong tim thay ma lop nay."<<endl;
+					break;
+				}
+				cout << "Them lop uu tien cho hoc phan:" << str<<endl;
 				setOffer2(ds_LopHoc, id);
 				break;
 			}
